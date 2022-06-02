@@ -1,0 +1,7 @@
+{
+    "default": {
+        "post_min": 30,
+        "post_max": 70,
+        "translate": []
+    }
+}
