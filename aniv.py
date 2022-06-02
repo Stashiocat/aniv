@@ -476,12 +476,6 @@ if __name__ == '__main__':
             inp = inp[1::]
             if inp.lower() == "run":
                 break
-            elif inp.lower() == "learn":
-                markov.filter_and_combine('biglog_new.log')
-            elif inp.lower() == "train":
-                markov.train()
-            elif inp.lower() == "filter":
-                markov.filter_log()
             elif inp.lower() == "load":
                 markov.load()
             else:
