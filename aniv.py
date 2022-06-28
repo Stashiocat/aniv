@@ -271,7 +271,7 @@ class Bot(commands.Bot):
                 if new_msg:
                     new_msg = f"@{message.author.display_name} {new_msg}"
                     Utils.log(f"{channel.ljust(self.__longest_username)}: ({channel_data['msg_post_rate']})[{markov.getKey(msg).rstrip()}][{message.author.display_name}] {new_msg}")
-                    time.sleep(random.randint(3, 6))
+                    await asyncio.sleep(random.randint(3, 6))
                     await message.channel.send(new_msg)
                     return
         
@@ -295,7 +295,7 @@ class Bot(commands.Bot):
                 Utils.log(f"{channel.ljust(self.__longest_username)}: ({channel_data['msg_post_rate']})[{markov.getKey(channel_data['reply_msg']).rstrip()}] {msg}")
                 
                 msg = self.__user_settings.translate_message(channel, msg)
-                time.sleep(random.randint(3, 8))
+                await asyncio.sleep(random.randint(3, 8))
                 await message.channel.send(msg)
 
     async def join_channel(self, channels):
